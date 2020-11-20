@@ -1,4 +1,79 @@
-// @media (max-width: 1200px)
-// @media (max-width: 992px)
-// @media (max-width: 768px)
-// @media (max-width: 576px)
+@media (max-width: 1200px)
+  .container
+    max-width: 960px
+
+@media (max-width: 992px)
+  .container
+    max-width: 720px
+  .header
+    padding: 30px 0
+    &__logo
+      margin-right: 0
+    &__search
+      margin: 0 auto
+      width: 340px
+  .nav
+    padding: 21px 0
+    &__list
+      justify-content: space-around
+    &__link
+      font-size: 12px
+  .logo
+    &__img
+      width: 160px
+@media (max-width: 767px)
+  .container
+    max-width: 540px
+  .nav
+    display: none
+  .header
+    &__search
+      display: none
+    &__user
+      display: none
+    &__burger
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: space-between
+      width: 16px
+      height: 11px
+      padding: 0
+    &__line
+      width: 16px
+      height: 1px
+      background-color: $primary-color
+  .logo
+    &__img
+      width: 132px
+  .hotel   //к следующему уроку
+    &__inner   //к следующему уроку
+      justify-content: space-between   //к следующему уроку
+    &__text   //к следующему уроку
+      width: 100%   //к следующему уроку
+    &__stars    //к следующему уроку
+      flex-basis: auto   //к следующему уроку
+    &__title  //к следующему уроку
+      flex-basis: 100%  //к следующему уроку
+      margin-top: 10px  //к следующему уроку
+      margin-right: 0  //к следующему уроку
+    &__offer  //к следующему уроку
+      order: -1  //к следующему уроку
+    &__rating  //к следующему уроку
+      display: none  //к следующему уроку
+@media (max-width: 576px)
+  .container
+    padding: 0
+    width: 87%
+@media (max-width: 480px)
+  .header
+    padding: 21px 0 22px
+  .logo
+    &__img
+      width: 99px
+  .breadcrumb         //к следующему уроку
+    padding: 20px 0
+  .hotel              //к следующему уроку
+    padding-top: 3px
+    &__title
+      font-size: 24px
