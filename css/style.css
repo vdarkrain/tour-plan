@@ -95,7 +95,7 @@ button {
   border: none;
   font-size: 12px;
   line-height: 15px;
-  color: #333;
+  color: #333333;
 }
 
 .search__button {
@@ -130,7 +130,7 @@ button {
   margin-left: 18px;
   font-size: 14px;
   line-height: 18px;
-  color: #333;
+  color: #333333;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -545,7 +545,7 @@ template {
   .header__line {
     width: 16px;
     height: 1px;
-    background-color: #333;
+    background-color: #333333;
   }
   .logo__img {
     width: 132px;
@@ -667,14 +667,14 @@ template {
 .hotel__title {
   font-weight: 700;
   font-size: 24px;
-  color: #333;
+  color: #333333;
   text-transform: uppercase;
   margin-right: 15px;
 }
 
 .hotel__offer {
   padding: 5px 9px;
-  color: #333;
+  color: #333333;
   font-weight: 600;
   font-size: 10px;
   background-color: #EC1F46;
@@ -684,7 +684,7 @@ template {
 .hotel__descr {
   font-size: 12px;
   line-height: 15px;
-  color: #333;
+  color: #333333;
 }
 
 .rating {
@@ -717,5 +717,25 @@ template {
 
 .rating__counter {
   font-size: 14px;
+}
+
+.breadcrumb {
+  padding: 19px 0;
+}
+
+.breadcrumb__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 10px;
+  color: #333333;
+}
+
+.breadcrumb__item:not(:last-child):after {
+  content: "/";
+  margin-right: 4px;
 }
 /*# sourceMappingURL=style.css.map */
