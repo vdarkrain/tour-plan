@@ -1,53 +1,44 @@
 .hotel
-  padding-top: 17px
-  padding-bottom: 70px
-  &__info
-    display: flex
-    align-items: center
-    justify-content: space-between
-  &__text
-  &__inner
-    display: flex
-    flex-wrap: wrap
-    align-items: center
-    margin-bottom: 2px
-  &__stars
+    padding-top: 23px
+    padding-bottom: 70px
+    &-info
+        display: flex
+        align-items: center
+        justify-content: space-between
+        &__offer
+            margin-left: 14px
+            margin-top: 4px
+        &__name
+            margin-top: 4px
+            margin-bottom: 0
+        &__description
+            margin: 5px  0
+    &-name
+        font-size: 24px
+        line-height: 30px
+    &-wrapper
+        display: flex
+        flex-wrap: wrap
+        align-items: center
+    &-description
+        font-size: 12px
+        line-height: 15px
+.stars
     flex-basis: 100%
-    margin-bottom: 4px
-    &-img
-      width: 8px
-      height: 8px
-  &__title
-    font-weight: 700
-    font-size: 24px
-    color: $text-color
-    text-transform: uppercase
-    margin-right: 15px
-  &__offer
-    padding: 5px 9px
-    color: $text-color
-    font-weight: 600
+.offer
     font-size: 10px
+    line-height: 13px
+    padding: 3px 9px
     background-color: $primary
     border-radius: 3px
-  &__descr
-    font-size: 12px
-    line-height: 15px
-    color: $text-color
+    color: $light
 .rating
-  display: flex
-  flex-direction: column
-  align-items: center
-  justify-content: center
-  margin-top: 5px
-  max-width: 65px
-  min-height: 45px
-  padding: 7px
-  background-color: $primary
-  border-radius: 4px
-  color: $white-color
-  &__name
-    margin-bottom: 3px
-    font-size: 8px
-  &__counter
-    font-size: 14px
+    max-width: 65px
+    min-height: 45px
+    text-align: center
+    color: $light
+    background-color: $primary
+    border-radius: 4px
+    &__text
+        font-size: 8px
+        line-height: 10px
