@@ -556,6 +556,38 @@ template {
   line-height: 15px;
 }
 
+.hotel__slider {
+  position: relative;
+  overflow: hidden;
+  width: 728px;
+  height: 450px;
+  border-radius: 8px;
+  margin-left: 0;
+}
+
+.hotel-btn {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  background-position: center;
+  background-size: 10px;
+  background-repeat: no-repeat;
+  z-index: 99;
+}
+
+.hotel--next {
+  right: 16px;
+  background-image: url("../img/btn-next.svg");
+}
+
+.hotel--prev {
+  left: 18px;
+  background-image: url("../img/btn-prev.svg");
+}
+
 .stars {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
