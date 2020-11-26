@@ -343,7 +343,7 @@ template {
 
 @font-face {
   font-family: 'Mulish';
-  src: url("../fonts/Mulish-SemiBold.woff2") format("woff2"), url("../fonts/Mulish-SemiBold.woff") format("woff");
+  src: url("../fonts/Mulish-SemiBold.woff2") format("woff2");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -351,7 +351,7 @@ template {
 
 @font-face {
   font-family: 'Nunito';
-  src: url("../fonts/Nunito-Regular.woff2") format("woff2"), url("../fonts/Nunito-Regular.woff") format("woff");
+  src: url("../fonts/Nunito-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -359,7 +359,7 @@ template {
 
 @font-face {
   font-family: 'Nunito';
-  src: url("../fonts/Nunito-SemiBold.woff2") format("woff2"), url("../fonts/Nunito-SemiBold.woff") format("woff");
+  src: url("../fonts/Nunito-SemiBold.woff2") format("woff2");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -367,7 +367,7 @@ template {
 
 @font-face {
   font-family: 'Nunito';
-  src: url("../fonts/Nunito-ExtraBold.woff2") format("woff2"), url("../fonts/Nunito-ExtraBold.woff") format("woff");
+  src: url("../fonts/Nunito-ExtraBold.woff2") format("woff2");
   font-weight: 800;
   font-style: normal;
   font-display: swap;
@@ -375,7 +375,7 @@ template {
 
 @font-face {
   font-family: 'Mulish';
-  src: url("../fonts/Mulish-Bold.woff2") format("woff2"), url("../fonts/Mulish-Bold.woff") format("woff");
+  src: url("../fonts/Mulish-Bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -383,15 +383,14 @@ template {
 
 @font-face {
   font-family: 'Mulish';
-  src: url("../fonts/Mulish-Light.woff2") format("woff2"), url("../fonts/Mulish-Light.woff") format("woff");
-  font-weight: 300;
+  src: url("../fonts/Mulish-Light.woff2") format("woff2");
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
   font-family: 'Mulish';
-  src: url("../fonts/Mulish-Regular.woff2") format("woff2"), url("../fonts/Mulish-Regular.woff") format("woff");
+  src: url("../fonts/Mulish-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -563,12 +562,30 @@ button {
   height: 100%;
   width: 65px;
   background: #EC1F46;
+  -webkit-transition: background-color .25s ease-in-out;
+  transition: background-color .25s ease-in-out;
+}
+
+.search__button:hover {
+  background-color: #c71134;
+  -webkit-transition: background-color .25s ease-in-out;
+  transition: background-color .25s ease-in-out;
 }
 
 .search__img {
   width: 16px;
   height: 16px;
   fill: #fff;
+  -webkit-transition: all .45s;
+  transition: all .45s;
+  z-index: 100;
+}
+
+.search__img:hover {
+  -webkit-transform: rotate(365deg);
+          transform: rotate(365deg);
+  -webkit-transition: all .45s;
+  transition: all .45s;
 }
 
 .user {
@@ -632,6 +649,14 @@ button {
   font-size: 14px;
   text-transform: uppercase;
   color: #fff;
+  -webkit-transition: color .25s ease;
+  transition: color .25s ease;
+}
+
+.nav__link:hover {
+  color: #EC1F46;
+  -webkit-transition: color .25s ease;
+  transition: color .25s ease;
 }
 
 .breadcrumb {
@@ -861,6 +886,14 @@ button {
   color: inherit;
   background-color: #EC1F46;
   border-radius: 4px;
+  -webkit-transition: background-color .25s ease-in-out;
+  transition: background-color .25s ease-in-out;
+}
+
+.hotel__button:hover {
+  background-color: #c71134;
+  -webkit-transition: background-color .25s ease-in-out;
+  transition: background-color .25s ease-in-out;
 }
 
 .hotel__room {
@@ -1100,6 +1133,14 @@ button {
   font-weight: 700;
   font-size: 12px;
   color: #fff;
+  -webkit-transition: background-color .25s ease-in-out;
+  transition: background-color .25s ease-in-out;
+}
+
+.subscribe__button:hover {
+  background-color: #c71134;
+  -webkit-transition: background-color .25s ease-in-out;
+  transition: background-color .25s ease-in-out;
 }
 
 .reviews {
@@ -1243,9 +1284,105 @@ button {
   color: #333;
 }
 
+.activities {
+  padding: 62px 0 98px;
+}
+
+.activities__title {
+  font-weight: 700;
+  font-size: 24px;
+  text-transform: uppercase;
+  color: #000;
+  margin-bottom: 58px;
+}
+
+.card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.card__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  position: relative;
+  padding: 25px 27px 24px 27px;
+  width: 255px;
+  height: 255px;
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+.card__item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(179.83deg, rgba(196, 196, 196, 0) 35.34%, #0A223D 99.85%);
+  z-index: -1;
+}
+
+.card__img {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -2;
+}
+
+.card__title {
+  margin-top: auto;
+  margin-bottom: 18px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  color: #fff;
+}
+
+.card__btn {
+  padding: 9px 21px 8px 20px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 12px;
+  background-color: #EC1F46;
+  border-radius: 4px;
+  -webkit-transition: background-color .25s ease-in-out;
+  transition: background-color .25s ease-in-out;
+}
+
+.card__btn:hover {
+  background-color: #c71134;
+  -webkit-transition: background-color .25s ease-in-out;
+  transition: background-color .25s ease-in-out;
+}
+
 @media (max-width: 1200px) {
   .container {
     max-width: 960px;
+  }
+  .card__item {
+    width: 220px;
+    height: 220px;
   }
 }
 
@@ -1344,6 +1481,26 @@ button {
   }
   .reviews__slider-btn--prev {
     left: 1px;
+  }
+  .activities {
+    padding-top: 52px;
+  }
+  .card {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .card__item {
+    width: 48.5%;
+    height: 255px;
+  }
+  .card__item:nth-child(4n-2) {
+    margin-bottom: 20px;
+  }
+  .card__item:nth-child(4n-3) {
+    margin-bottom: 20px;
+  }
+  .card__title {
+    max-width: 200px;
   }
 }
 
@@ -1465,6 +1622,12 @@ button {
   .subscribe {
     width: 100%;
   }
+  .card__item:nth-child(4n-2) {
+    margin-bottom: 15px;
+  }
+  .card__item:nth-child(4n-3) {
+    margin-bottom: 15px;
+  }
 }
 
 @media (max-width: 576px) {
@@ -1495,6 +1658,39 @@ button {
   }
   .reviews__title {
     font-size: 25px;
+  }
+  .activities {
+    padding-top: 22px;
+  }
+  .activities__title {
+    font-size: 18px;
+    margin-bottom: 37px;
+  }
+  .card__item {
+    padding: 25px 25px 24px;
+    width: 100%;
+  }
+  .card__item:nth-child(4n-2) {
+    margin-bottom: 0;
+  }
+  .card__item:nth-child(4n-3) {
+    margin-bottom: 0;
+  }
+  .card__item:not(:last-child) {
+    margin-bottom: 20px;
+  }
+  .card__item:nth-child(3) {
+    margin-bottom: 28px;
+  }
+  .card__item:nth-child(2) {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .card__item:nth-child(4) {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
   }
 }
 
