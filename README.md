@@ -1,2 +1,1 @@
-# tour-plan-adaptive 
-Salakhov
+# tour-plan-adaptive
