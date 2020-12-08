@@ -8,56 +8,42 @@ require 'phpmailer/Exception.php';
 $name = $_POST['name'];
 $phone = $_POST['phone'];
 $message = $_POST['message'];
-$email = $_POST['email'];
-$button = $_POST['button'];
 
 // Формирование самого письма
-if ($button == 'message-form'){
 $title = "Новое обращение Best Tour Plan";
 $body = "
 <h2>Новое обращение</h2>
 <b>Имя:</b> $name<br>
 <b>Телефон:</b> $phone<br><br>
-<b>Сообщение:</b><br>$message
-";
-};
-
-
-if ($button == 'subscribe-form'){
-  $title = "Новое подписка на рассылку Best Tour Plan";
-  $body = "
-  <h2>Новая подписка</h2>
-  <b>Email:</b> $email
-  ";
-};
+<b>Сообщение:</b><br>$message";
 
 // Настройки PHPMailer
 $mail = new PHPMailer\PHPMailer\PHPMailer();
 try {
-    $mail->isSMTP();
+    $mail->isSMTP();   
     $mail->CharSet = "UTF-8";
     $mail->SMTPAuth   = true;
     //$mail->SMTPDebug = 2;
     $mail->Debugoutput = function($str, $level) {$GLOBALS['status'][] = $str;};
 
     // Настройки вашей почты
-    $mail->Host       = 'smtp.gmail.com'; // SMTP сервера вашей почты
+    $mail->Host       = 'smtp.mail.ru'; // SMTP сервера вашей почты
     $mail->Username   = ''; // Логин на почте
     $mail->Password   = ''; // Пароль на почте
     $mail->SMTPSecure = 'ssl';
     $mail->Port       = 465;
-    $mail->setFrom('pogoslav1@gmail.com', 'Slava Pogosov'); // Адрес самой почты и имя отправителя
+    $mail->setFrom(''); // Адрес самой почты и имя отправителя
 
     // Получатель письма
-    $mail->addAddress('wywkoff@gmail.com');
+    $mail->addAddress('');  
 
-// Отправка сообщения
-$mail->isHTML(true);
-$mail->Subject = $title;
-$mail->Body = $body;
+    // Отправка сообщения
+    $mail->isHTML(true);
+    $mail->Subject = $title;
+    $mail->Body = $body;    
 
 // Проверяем отравленность сообщения
-if ($mail->send()) {$result = "success";}
+if ($mail->send()) {$result = "success";} 
 else {$result = "error";}
 
 } catch (Exception $e) {
@@ -65,10 +51,5 @@ else {$result = "error";}
     $status = "Сообщение не было отправлено. Причина ошибки: {$mail->ErrorInfo}";
 }
 
-if ($button == 'message-form'){
-  header('location: thanks.html');
-}
-
-if ($button == 'subscribe-form'){
-  header('location: subscribe.html');
-}
+// Отображение результата
+header('Location: thankyou.html');
